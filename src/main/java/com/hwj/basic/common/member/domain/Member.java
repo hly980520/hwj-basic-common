@@ -2,6 +2,7 @@ package com.hwj.basic.common.member.domain;
 
 import com.alibaba.fastjson2.JSONObject;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.StringJoiner;
 
@@ -11,7 +12,9 @@ import java.util.StringJoiner;
  * @author: wenjing.huang
  * @since: 2025-03-14 20:42:48
  */
-public class Member {
+public class Member implements Serializable {
+
+    private static final long serialVersionUID = 4131328601213162133L;
 
     private Long id;
 
