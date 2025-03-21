@@ -28,6 +28,7 @@ public interface MemberReadService {
      */
     RpcResult<Member> queryByPhoneNumber(String countryCode, String phoneNumber);
 
+
     /**
      * 分页条件查询
      * @param dataPage 分页参数
@@ -35,4 +36,5 @@ public interface MemberReadService {
      * @return RpcResult<DataPage<Member>>
      */
     RpcResult<DataPage<Member>> queryPage(DataPage<Member> dataPage,Member member);
+
 }

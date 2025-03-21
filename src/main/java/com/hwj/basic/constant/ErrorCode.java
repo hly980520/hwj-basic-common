@@ -29,6 +29,7 @@ public class ErrorCode implements Serializable {
     public static final ErrorCode SYSTEM_EXCEPTION = new ErrorCode("10000006","System Exception");
 
 
+
     /**
      * 错误码code
      */
