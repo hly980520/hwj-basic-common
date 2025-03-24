@@ -1,4 +1,4 @@
-package com.hwj.basic.common.activity.dto;
+package com.hwj.basic.common.activitytask.dto;
 
 import com.alibaba.fastjson2.JSONObject;
 
@@ -6,29 +6,23 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.StringJoiner;
 
-/**
- * @Program:
- * @Description:
- * @author: wenjing.huang
- * @since:
- */
-public class ActivityDTO implements Serializable {
+public class ActivityTaskDTO implements Serializable {
 
-    private static final long serialVersionUID = -9132143273220761537L;
+    private static final long serialVersionUID = 4295683199812318009L;
 
     private Long id;
 
     private String name;
 
-    private Integer activityType;
-
-    private LocalDateTime startTime;
-
-    private LocalDateTime endTime;
+    private Long activityId;
 
     private Integer status;
 
     private JSONObject features;
+
+    private LocalDateTime createdDate;
+
+    private String createdBy;
 
     private LocalDateTime updatedDate;
 
@@ -50,28 +44,12 @@ public class ActivityDTO implements Serializable {
         this.name = name;
     }
 
-    public Integer getActivityType() {
-        return activityType;
+    public Long getActivityId() {
+        return activityId;
     }
 
-    public void setActivityType(Integer activityType) {
-        this.activityType = activityType;
-    }
-
-    public LocalDateTime getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(LocalDateTime startTime) {
-        this.startTime = startTime;
-    }
-
-    public LocalDateTime getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(LocalDateTime endTime) {
-        this.endTime = endTime;
+    public void setActivityId(Long activityId) {
+        this.activityId = activityId;
     }
 
     public Integer getStatus() {
@@ -88,6 +66,22 @@ public class ActivityDTO implements Serializable {
 
     public void setFeatures(JSONObject features) {
         this.features = features;
+    }
+
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
     }
 
     public LocalDateTime getUpdatedDate() {
@@ -108,16 +102,16 @@ public class ActivityDTO implements Serializable {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", ActivityDTO.class.getSimpleName() + "[", "]")
+        return new StringJoiner(", ", ActivityTaskDTO.class.getSimpleName() + "[", "]")
                 .add("id=" + id)
                 .add("name='" + name + "'")
-                .add("activityType='" + activityType)
-                .add("startTime='" + startTime)
-                .add("endTime='" + endTime)
+                .add("activityId='" + activityId)
                 .add("status='" + status)
                 .add("features='" + features)
-                .add("updatedDate=" + updatedDate)
-                .add("updatedBy='" + updatedBy + "'")
+                .add("createdDate='" + createdDate)
+                .add("createdBy='" + createdBy + "'")
+                .add("updatedDate='" + updatedDate)
+                .add("updatedBy=" + updatedBy + "'")
                 .toString();
     }
 }

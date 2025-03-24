@@ -9,10 +9,38 @@ import java.util.List;
 public interface ActivityReadService {
 
     /**
-     * 查询所有的活动信息
+     * 根据活动id来查询
+     * @param id
      * @return
      */
-    RpcResult<List<ActivityDTO>> queryList();
+    RpcResult<ActivityDTO> queryById(Long id);
+
+    /**
+     * 根据活动名称来查询
+     * @param name
+     * @return
+     */
+    RpcResult<ActivityDTO> queryByName(String name);
+
+    /**
+     * 根据活动类型来查询
+     * @param type
+     * @return
+     */
+    RpcResult<ActivityDTO> queryByType(Integer type);
+
+    /**
+     * 根据活动状态来查询 [0:草稿 1:上线 2:下线]
+     * @param status
+     * @return
+     */
+    RpcResult<ActivityDTO> queryByStatus(Integer status);
+
+    /**
+     * 查询所有的活动信息 活动状态不能是0
+     * @return
+     */
+    RpcResult<List<ActivityDTO>> queryList(Integer status);
 
 
 
