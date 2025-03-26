@@ -6,6 +6,26 @@ import com.hwj.basic.result.RpcResult;
 
 public interface MemberGiftReadService {
 
+    /**
+     * 根据id查询
+     * @param id
+     * @return
+     */
+    RpcResult<MemberGiftDTO> queryById(Long id);
+
+    /**
+     * 根据用户id查询
+     * @param memberId
+     * @return
+     */
+    RpcResult<MemberGiftDTO> queryByMemberId(Long memberId);
+
+    /**
+     * 根据礼品id查询
+     * @param giftId
+     * @return
+     */
+    RpcResult<MemberGiftDTO> queryByGiftId(Long giftId);
 
     /**
      * 分页查询
