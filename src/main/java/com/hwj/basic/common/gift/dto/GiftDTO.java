@@ -50,6 +50,14 @@ public class GiftDTO implements Serializable {
         this.giftType = giftType;
     }
 
+    public JSONObject getFeatures() {
+        return features;
+    }
+
+    public void setFeatures(JSONObject features) {
+        this.features = features;
+    }
+
     public LocalDateTime getCreatedDate() {
         return createdDate;
     }

@@ -30,6 +30,10 @@ public class ActivityDTO implements Serializable {
 
     private JSONObject features;
 
+    private LocalDateTime createdDate;
+
+    private String createdBy;
+
     private LocalDateTime updatedDate;
 
     private String updatedBy;
@@ -94,6 +98,22 @@ public class ActivityDTO implements Serializable {
         return updatedDate;
     }
 
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
     public void setUpdatedDate(LocalDateTime updatedDate) {
         this.updatedDate = updatedDate;
     }
@@ -118,6 +138,8 @@ public class ActivityDTO implements Serializable {
                 .add("features='" + features)
                 .add("updatedDate=" + updatedDate)
                 .add("updatedBy='" + updatedBy + "'")
+                .add("createdDate=" + createdDate)
+                .add("createdBy='" + createdBy + "'")
                 .toString();
     }
 }

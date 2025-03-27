@@ -20,7 +20,11 @@ public class MemberOperDTO implements Serializable {
 
     private LocalDateTime createdDate;
 
+    private String createdBy;
+
     private LocalDateTime updatedDate;
+
+    private String updatedBy;
 
     public Long getId() {
         return id;
@@ -87,7 +91,9 @@ public class MemberOperDTO implements Serializable {
                 .add("operationType='" + operationType + "'")
                 .add("memberRealIp='" + memberRealIp + "'")
                 .add("createdDate=" + createdDate)
+                .add("createdBy='" + createdBy + "'")
                 .add("updatedDate=" + updatedDate)
+                .add("updatedBy='" + updatedBy + "'")
                 .toString();
     }
 }

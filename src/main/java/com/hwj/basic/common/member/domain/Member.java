@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.util.StringJoiner;
 
 /**
- * @Program: hwj-user-center
+ * @Program: hwj-basic-common
  * @Description:
  * @author: wenjing.huang
  * @since: 2025-03-14 20:42:48

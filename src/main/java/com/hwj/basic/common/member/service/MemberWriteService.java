@@ -18,4 +18,11 @@ public interface MemberWriteService {
      * @return RpcResult<Member>
      */
     RpcResult<Member> update(Member member);
+
+    /**
+     * 删除用户
+     * @param id
+     * @return
+     */
+    RpcResult<Member> delete(Long id);
 }
