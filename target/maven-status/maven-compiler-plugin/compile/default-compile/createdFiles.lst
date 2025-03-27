@@ -1,7 +1,0 @@
-com\hwj\basic\exception\BusinessException.class
-com\hwj\basic\common\member\domain\Member.class
-com\hwj\basic\common\member\service\MemberWriteService.class
-com\hwj\basic\common\member\service\MemberReadService.class
-com\hwj\basic\constant\ErrorCode.class
-com\hwj\basic\mybatis\DataPage.class
-com\hwj\basic\result\RpcResult.class
