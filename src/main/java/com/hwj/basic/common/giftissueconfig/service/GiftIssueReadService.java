@@ -28,6 +28,13 @@ public interface GiftIssueReadService {
     RpcResult<GiftIssueDTO> queryByGiftInfos(String giftInfos);
 
     /**
+     * 根据id查询发放数量
+     * @param giftId
+     * @return
+     */
+    RpcResult<Integer> countByGiftId(Long giftId);
+
+    /**
      * 分页查询
      * @param dataPage 分页参数
      * @param giftIssueDTO 查询参数

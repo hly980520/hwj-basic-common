@@ -42,6 +42,13 @@ public interface ActivityReadService {
      */
     RpcResult<List<ActivityDTO>> queryList(Integer status);
 
+    /**
+     * 根据id批量查询
+     * @param ids
+     * @return
+     */
+    RpcResult<List<ActivityDTO>> queryActivityList(List<Long> ids);
+
 
 
     /**

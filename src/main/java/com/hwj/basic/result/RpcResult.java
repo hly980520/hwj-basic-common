@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.StringJoiner;
 
 /**
- * @Program: hwj-user-center
+ * @Program: hwj-basic-common
  * @Description: RPC调用结果
  * @author: wenjing.huang
  * @since: 2025-03-14 17:14:26

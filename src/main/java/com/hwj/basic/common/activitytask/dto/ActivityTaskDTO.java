@@ -18,6 +18,12 @@ public class ActivityTaskDTO implements Serializable {
 
     private Integer status;
 
+    private String msgEventCode;
+
+    private String rewardConfig;
+
+    private String ruleConfig;
+
     private JSONObject features;
 
     private LocalDateTime createdDate;
@@ -100,6 +106,30 @@ public class ActivityTaskDTO implements Serializable {
         this.updatedBy = updatedBy;
     }
 
+    public String getMsgEventCode() {
+        return msgEventCode;
+    }
+
+    public void setMsgEventCode(String msgEventCode) {
+        this.msgEventCode = msgEventCode;
+    }
+
+    public String getRewardConfig() {
+        return rewardConfig;
+    }
+
+    public void setRewardConfig(String rewardConfig) {
+        this.rewardConfig = rewardConfig;
+    }
+
+    public String getRuleConfig() {
+        return ruleConfig;
+    }
+
+    public void setRuleConfig(String ruleConfig) {
+        this.ruleConfig = ruleConfig;
+    }
+
     @Override
     public String toString() {
         return new StringJoiner(", ", ActivityTaskDTO.class.getSimpleName() + "[", "]")
@@ -107,6 +137,9 @@ public class ActivityTaskDTO implements Serializable {
                 .add("name='" + name + "'")
                 .add("activityId='" + activityId)
                 .add("status='" + status)
+                .add("msgEventCode='" + msgEventCode + "'")
+                .add("rewardConfig='" + rewardConfig + "'")
+                .add("ruleConfig='" + ruleConfig + "'")
                 .add("features='" + features)
                 .add("createdDate='" + createdDate)
                 .add("createdBy='" + createdBy + "'")
