@@ -16,6 +16,8 @@ public class GiftDTO implements Serializable {
 
     private Integer giftType;
 
+    private Integer quantity;
+
     private JSONObject features;
 
     private LocalDateTime createdDate;
@@ -48,6 +50,14 @@ public class GiftDTO implements Serializable {
 
     public void setGiftType(Integer giftType) {
         this.giftType = giftType;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 
     public JSONObject getFeatures() {
@@ -96,6 +106,7 @@ public class GiftDTO implements Serializable {
                 .add("id=" + id)
                 .add("name='" + name + "'")
                 .add("giftType=" + giftType)
+                .add("quantity=" + quantity)
                 .add("features=" + features)
                 .add("createdDate=" + createdDate)
                 .add("createdBy='" + createdBy + "'")

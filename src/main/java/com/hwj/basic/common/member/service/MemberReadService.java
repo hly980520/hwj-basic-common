@@ -1,6 +1,7 @@
 package com.hwj.basic.common.member.service;
 
 import com.hwj.basic.common.member.domain.Member;
+import com.hwj.basic.common.member.params.MemberQuery;
 import com.hwj.basic.mybatis.DataPage;
 import com.hwj.basic.result.RpcResult;
 
@@ -32,9 +33,9 @@ public interface MemberReadService {
     /**
      * 分页条件查询
      * @param dataPage 分页参数
-     * @param member 查询参数
+     * @param params 查询参数
      * @return RpcResult<DataPage<Member>>
      */
-    RpcResult<DataPage<Member>> queryPage(DataPage<Member> dataPage,Member member);
+    RpcResult<DataPage<Member>> queryPage(DataPage<Member> dataPage, MemberQuery params);
 
 }
